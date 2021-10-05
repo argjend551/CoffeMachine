@@ -6,19 +6,20 @@ public class Menyer {
     private String refill;
     Logic a = new Logic();
 
+// Main menyn för kaffe maskinen
 
 public void mainMeny(){
         System.out.print("buy, fill, remaining, exit: ");
    inputChoice = sc.nextLine();
 while (true) {
     if(inputChoice.equals("buy")){
-        buy();
+        Buy();
     }
     if(inputChoice.equals("fill")){
-        fill();
+        Fill();
     }
     if(inputChoice.equals("remaining")){
-        a.remaining();
+        a.Remaining();
     }
     if (inputChoice.equals("exit")){
         System.exit(0);
@@ -34,23 +35,31 @@ while (true) {
 
     Logic userChoice = new Logic();
 
-    public void buy(){
+// meny för att välja vilken kaffe du vill ha
+// Skickar värdet espresso,latte,cappuccino beroende vilken du väljer till metoden Kaffeval i klassen Logic.
+
+
+    public void Buy(){
         System.out.print("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino: ");
         String kaffeVal = sc.nextLine();
 
+
         if(kaffeVal.equals("1")){
-            userChoice.Kaffeval("espresso");
+            userChoice.CoffeChoice("espresso");
         }
         if(kaffeVal.equals("2")){
-            userChoice.Kaffeval("latte");
+            userChoice.CoffeChoice("latte");
         }
         if(kaffeVal.equals("3")){
-            userChoice.Kaffeval("cappuccino");
+            userChoice.CoffeChoice("cappuccino");
         }
 
     }
 
-    public void fill(){
+
+    // Meny för att välja vad du vill fylla på, när du gjort ditt val skickas värdet till metoden Refill i Logic klassen.
+
+    public void Fill(){
         Menyer meny = new Menyer();
         System.out.print("What do you want to fill? 1 - water, 2 - milk, 3 - coffebeans, 4 - cups, 5 - money: ");
 
@@ -60,19 +69,19 @@ while (true) {
         while(true) {
 
             if (refill.equals("1")) {
-                userChoice.refill("water");
+                userChoice.Refill("water");
                 meny.mainMeny();
             } else if (refill.equals("2")) {
-                userChoice.refill("milk");
+                userChoice.Refill("milk");
                 meny.mainMeny();
             } else if (refill.equals("3")) {
-                userChoice.refill("coffebeans");
+                userChoice.Refill("coffebeans");
                 meny.mainMeny();
             } else if (refill.equals("4")) {
-                userChoice.refill("cups");
+                userChoice.Refill("cups");
                 meny.mainMeny();
             } else if (refill.equals("5")){
-                userChoice.refill("money");
+                userChoice.Refill("money");
                 meny.mainMeny();
             }
             else {

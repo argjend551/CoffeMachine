@@ -11,8 +11,11 @@ public class Logic {
     static int money;
 
 
+ /* Tar emot värdet val från metoden Buy i klassen Menyer och jämför värdet om det matchar någon sorts caffe
+    och kollar med metoden CheckifEmpty om något är tomt. om något av dessa två matchar körs koden under den kaffesorten du valt.
+    */
 
-    public void Kaffeval(String val){
+    public void CoffeChoice(String val){
 
 
         if(val == "espresso" && CheckifEmpty() == true){
@@ -47,7 +50,11 @@ public class Logic {
 
     }
 
-    public void refill(String Val){
+     /* Tar emot värdet val från metoden Fill i klassen Menyer och jämför värdet om det matchar med water,milk,coffebeans,cups,money
+    om det te.x är water då körs kodstycket under water if satsen.
+    */
+
+    public void Refill(String Val){
 
         if(Val == "water" ){
 
@@ -100,6 +107,10 @@ public class Logic {
 
     }
 
+/*
+    Boolean där den kollar om det något är slut
+ */
+
     public boolean CheckifEmpty(){
         Menyer m = new Menyer();
 
@@ -140,8 +151,9 @@ public class Logic {
 
     }
 
+ // skriver ut alla värden
 
-    public void remaining(){
+    public void Remaining(){
 
         System.out.println("water: " + water);
         System.out.println("milk: " + Logic.milk);
