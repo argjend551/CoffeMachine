@@ -36,7 +36,7 @@ while (true) {
     Logic userChoice = new Logic();
 
 // meny för att välja vilken kaffe du vill ha
-// Skickar värdet espresso,latte,cappuccino beroende vilken du väljer till metoden Kaffeval i klassen Logic.
+// Skickar värdet espresso,latte,cappuccino beroende vilken du väljer till metoden Kaffeval i klassen Logic
 
 
     public void Buy(){
