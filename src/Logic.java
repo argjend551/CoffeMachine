@@ -108,7 +108,7 @@ public class Logic {
     }
 
 /*
-    Boolean där den kollar om det något är slut
+    Boolean där den kollar om det något är slut.
  */
 
     public boolean CheckifEmpty(){
